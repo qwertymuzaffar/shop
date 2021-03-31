@@ -1,5 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Поиск
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="search" (ionChange)="filter()"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
 <ion-content>
-  <ion-searchbar [(ngModel)]="search" (ionChange)="filter()"></ion-searchbar>
   <ion-list *ngIf="products.length; else noData">
     <ion-item (click)="detail(product)" *ngFor="let product of products.slice(0, count)">
       <ion-avatar slot="start">

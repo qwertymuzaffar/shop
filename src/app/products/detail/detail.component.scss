@@ -1,0 +1,28 @@
+ion-header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.image {
+  text-align: center;
+}
+
+.price-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 100px;
+  margin-top: 20px;
+
+  div {
+    border-bottom: 1px solid #c9c9c9;
+  }
+}

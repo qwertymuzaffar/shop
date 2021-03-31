@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+    <ion-back-button slot="start" defaultHref="/list"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Product</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <div class="image">
+      <img [src]="product?.image">
+    </div>
+    <ion-card-header>
+      <ion-card-title>{{product?.name}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div>
+        <p>{{product?.description}}</p>
+        <div class="price-buttons">
+          <ion-button (click)="setValue(100, 'amount')">$100</ion-button>
+          <ion-button (click)="setValue(10, 'amount')">$10</ion-button>
+          <ion-button (click)="setValue(2.2, 'quantity')">2.2qty</ion-button>
+          <ion-button (click)="setValue(9, 'quantity')">9qty</ion-button>
+        </div>
+        <form [formGroup]="form">
+          <div>
+            <span>Amount, $</span>
+            <ion-input type="number" formControlName="amount"></ion-input>
+          </div>
+          <div>
+            <span>Quantity</span>
+            <ion-input type="number" formControlName="quantity"></ion-input>
+          </div>
+        </form>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
